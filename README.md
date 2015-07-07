@@ -24,7 +24,7 @@ In this course we follow closely the required textbook: "A first Course in Bayes
 ### Chapter 3: One-parameter models
 
  - *Lecture Notes*
- - *[Examples]()*
+ - *[Examples](https://github.com/gdlc/STT465/blob/master/chapter3_examples.md)*
 
 
 
