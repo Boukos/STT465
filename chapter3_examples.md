@@ -12,4 +12,4 @@
 ```
 
 
-*[return](https://github.com/gdlc/STT465)*
+[STT 465 Home](https://github.com/gdlc/STT465)
