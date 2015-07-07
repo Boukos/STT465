@@ -49,10 +49,12 @@ In this course we follow closely the required textbook: "A first Course in Bayes
 ### Chapter 7: The multivariate normal model
  - *Lecture Notes*
  - *Examples* 
+ 
 ------------------------------------------------------------------
 ### Chapter 9: Linear regression
  - *Lecture Notes*
  - *Examples* 
+ 
 ------------------------------------------------------------------
 ### Chapter 10: Nonconjugate priors and Metrop0olis-Hastings algorithms
  - *Lecture Notes*
