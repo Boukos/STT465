@@ -9,6 +9,7 @@
 * **[Required textbook](http://www.stat.washington.edu/people/pdhoff/book.php)**
 * **[R-software](http://www.r-project.org/)**
 
-\begin{equation}
-  a^2+b^2=c^2
-\end{equation}
+## Chapter 1: Introduction and examples
+* **[Lecture notes](http://www.r-project.org/)**
+
+
