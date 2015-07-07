@@ -1,5 +1,4 @@
 # STT465: Bayesian Statistical Methods (MSU)
-# I am Juan and I jus farted, smell it!!!!
 
 * **Instructor:** Gustavo de los Campos ( gustavoc@msu.edu )
 
