@@ -9,3 +9,6 @@
 * **[Required textbook](http://www.stat.washington.edu/people/pdhoff/book.php)**
 * **[R-software](http://www.r-project.org/)**
 
+\begin{eq1}
+  x_i=\mu+\epsilon_i
+\end{eq1}
