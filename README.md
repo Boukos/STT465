@@ -15,6 +15,7 @@ In this course we follow closely the required textbook: "A first Course in Bayes
 ### Chapter 1: Introduction and examples
  - *Lecture Notes*
  - *Examples*
+
 ------------------------------------------------------------------
 ### Chapter 2: Belief, probability and exchangeability
  - *Lecture Notes*
