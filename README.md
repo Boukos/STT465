@@ -26,6 +26,24 @@ In this course we follow closely the required textbook: "A first Course in Bayes
  - *Lecture Notes*
  - *[Examples](https://github.com/gdlc/STT465/blob/master/chapter3_examples.md)*
 
+------------------------------------------------------------------
+### Chapter 4: Monte Carlo approximations
+
+ - *Lecture Notes*
+ - *[Examples]()*
+ 
+------------------------------------------------------------------
+### Chapter 5: The normal model
+
+ - *Lecture Notes*
+ - *[Examples]()*
+
+------------------------------------------------------------------
+### Chapter 6: Posterior approximation with the Gibbs sampler
+
+ - *Lecture Notes*
+ - *[Examples]()*
+ 
 
 
 
