@@ -16,7 +16,7 @@
 ------------------------------------------------------------------
 ### Chapter 3: Single-parameter models
 
-* **[Lecture notes](http://www.r-project.org/)**
+* *[Lecture notes](http://www.r-project.org/)*
 
 
 
