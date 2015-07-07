@@ -18,9 +18,9 @@
 
 * **[Lecture notes](http://www.r-project.org/)**
 
-*Examples*
 
-#### Beta-Binomial
+
+##### Beta-Binomial
 ```R
  # Beta-Binomial model
 
