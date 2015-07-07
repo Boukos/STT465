@@ -11,7 +11,7 @@
 
 ------------------------------------------------------------------
 ### Chapter 1: Introduction and examples
-* **[Lecture notes](http://www.r-project.org/)**
+* *[Lecture notes](http://www.r-project.org/)*
 
 ------------------------------------------------------------------
 ### Chapter 2: Review of probability & de Finetti's theorem
