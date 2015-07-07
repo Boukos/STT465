@@ -59,6 +59,7 @@ In this course we follow closely the required textbook: "A first Course in Bayes
 ### Chapter 10: Nonconjugate priors and Metrop0olis-Hastings algorithms
  - *Lecture Notes*
  - *Examples* 
+ 
 ------------------------------------------------------------------
 ### Chapter 11: Linear and generalized linear mixed effects models
  - *Lecture Notes*
