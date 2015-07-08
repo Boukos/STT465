@@ -1,7 +1,0 @@
-a. keep only the common varieties from X1 and X2 
-b. check whether there are common marker names in X1 and X2
-check their genotypes to see whether they are true duplicates
-	 these markers are not really duplicates although they have the same names: the mean rate of inconsistency was NaN 
-	 rate of inconsistencies was saved in error.commonMarker.rda 
-
-c. Put X1 and X2 infront of the original marker names;combine columns of X1 and X2 into X 
