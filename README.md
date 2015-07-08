@@ -1,5 +1,5 @@
 # STT465: Bayesian Statistical Methods (MSU)
-
+#### TEST
 
 * **Instructor:** Gustavo de los Campos ( gustavoc@msu.edu )
 
