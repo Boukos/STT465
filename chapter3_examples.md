@@ -2,13 +2,11 @@
 
 ```R
   # Parameter values 
-   theta=seq(from=
+   theta=seq(from=0,to=1,length=1000)
 
   # Prior
   
   # Likelihood
-
-
 ```
 
 
