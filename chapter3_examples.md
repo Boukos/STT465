@@ -8,6 +8,6 @@
   
   # Likelihood
 ```
-#### Hola Juan
+
 
 [STT 465 Home](https://github.com/gdlc/STT465)
