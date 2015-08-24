@@ -13,7 +13,7 @@ In this course we follow closely the required textbook: "A first Course in Bayes
 
 ------------------------------------------------------------------
 ### Chapter 1: Introduction and examples
- - *[Lecture Notes](https://github.com/gdlc/STT465/blob/master/STT465_1.pptx)*
+ - *[Lecture Notes](https://github.com/gdlc/STT465/blob/master/STT465_1.pdf)*
  - *Examples*
 
 ------------------------------------------------------------------
