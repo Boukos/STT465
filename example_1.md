@@ -1,4 +1,4 @@
-**Sampling from binomial distirbution**
+###Sampling from binomial distirbution
 
 **Estimating the expected value and variance of an estimator & it's MSE**
 
@@ -12,7 +12,7 @@
  mean(x)
 ```
 
-**Now let's play the sampling excercise**
+**Now let's play the (frequentist) sampling excercise**
 
 ```R
  nRep=1000
@@ -22,7 +22,7 @@
    x=rbinom(n=n,size=1,prob=theta)
    thetaHat[i]=mean(x)
  }
- plot(hist(thetaHat,30)); abline(v=theta,col=4,lwd=2)
+ plot(hist(thetaHat)); abline(v=theta,col=4,lwd=2)
 
  #bias
  mean(thetaHat)-theta
