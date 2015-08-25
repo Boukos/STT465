@@ -12,7 +12,7 @@
  mean(x)
 ```
 
-** No let's play the sampling excercise**
+**Now let's play the sampling excercise**
 
 ```R
  nRep=1000
