@@ -1,7 +1,8 @@
-## Sampling from binomial distirbution
-## Estimating the expected value and variance of an estimator & it's MSE
+**Sampling from binomial distirbution**
 
+**Estimating the expected value and variance of an estimator & it's MSE**
 
+```R
 ##
  theta=0.8
  n=10
@@ -9,8 +10,11 @@
 
  x=rbinom(n=n,size=1,prob=theta)
  mean(x)
+```
 
-## No let's play the sampling excercise
+** No let's play the sampling excercise**
+
+```R
  nRep=1000
  thetaHat=rep(NA,nRep)
 
@@ -29,5 +33,5 @@
  # MSE
   Ex=mean(x)
   mean((x-Ex)^2)
-
+```
 
