@@ -22,7 +22,7 @@
    x=rbinom(n=n,size=1,prob=theta)
    thetaHat[i]=mean(x)
  }
- plot(hist(x,30)); abline(v=theta,col=4,lwd=2)
+ plot(hist(thetaHat,30)); abline(v=theta,col=4,lwd=2)
 
  #bias
  mean(thetaHat)-theta
