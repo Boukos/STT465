@@ -5,7 +5,7 @@
 ```R
 ##
  theta=0.9
- n=15
+ n=35
 ##
 
  x=rbinom(n=n,size=1,prob=theta)
