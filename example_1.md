@@ -4,8 +4,8 @@
 
 ```R
 ##
- theta=0.8
- n=10
+ theta=0.9
+ n=15
 ##
 
  x=rbinom(n=n,size=1,prob=theta)
