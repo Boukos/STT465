@@ -31,7 +31,7 @@
  var(thetaHat)
 
  # MSE
-  Ex=mean(x)
-  mean((x-Ex)^2)
+  Ex=mean(thetaHat)
+  mean((thetaHat-Ex)^2)
 ```
 
