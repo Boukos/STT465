@@ -39,5 +39,5 @@ Note:
 
  - Above we have computed Monte Carlo (MC) estimates of the expected value and varianc of the estimator. The MC error depends on the number of MC samples (nRep, above).
 
-  - In this simple example we can actually compute the mean and variance of the estimator analythically.
+ - In this simple example we can actually compute the mean and variance of the estimator analythically.
 
