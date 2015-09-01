@@ -14,11 +14,11 @@ In this course we follow closely the required textbook: "A first Course in Bayes
 ------------------------------------------------------------------
 ### Chapter 1: Introduction and examples
  - *[Lecture Notes](https://github.com/gdlc/STT465/blob/master/STT465_1.pdf)*
- - *Examples*
+ - *[Examples](https://github.com/gdlc/STT465/blob/master/examples_1.md)*
 
 ------------------------------------------------------------------
 ### Chapter 2: Belief, probability and exchangeability
- - [Lecture Notes](https://github.com/gdlc/STT465/blob/master/STT465_1.pdf)
+ - *[Lecture Notes](https://github.com/gdlc/STT465/blob/master/STT465_1.pdf)*
  - *Examples*
  
 ------------------------------------------------------------------
