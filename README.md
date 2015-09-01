@@ -5,7 +5,7 @@
 
 * **Time/Place:** MW 10:20am-11:40am A120 Wells Hall (WH)   
 
-* **[Syllabus](https://www.dropbox.com/s/p08vzobbyu6utme/STT465_Syllabus.docx?dl=0)**
+* **[Syllabus](https://github.com/gdlc/STT465/blob/master/STT465_Syllabus.pdf)**
 * **[Required textbook](http://www.stat.washington.edu/people/pdhoff/book.php)**
 * **[R-software](http://www.r-project.org/)**
 
@@ -18,7 +18,7 @@ In this course we follow closely the required textbook: "A first Course in Bayes
 
 ------------------------------------------------------------------
 ### Chapter 2: Belief, probability and exchangeability
- - *Lecture Notes*
+ - [Lecture Notes](https://github.com/gdlc/STT465/blob/master/STT465_1.pdf)
  - *Examples*
  
 ------------------------------------------------------------------
