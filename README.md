@@ -19,6 +19,7 @@ In this course we follow closely the required textbook: "A first Course in Bayes
 ------------------------------------------------------------------
 ### Chapter 2: Belief, probability and exchangeability
  - *[Lecture](https://github.com/gdlc/STT465/blob/master/STT465_2.pdf)*
+ 
  - *Examples*
 -------------------------------------------------------------------
 
