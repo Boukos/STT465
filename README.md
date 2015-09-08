@@ -13,41 +13,45 @@ In this course we follow closely the required textbook: "A first Course in Bayes
 
 ------------------------------------------------------------------
 ### Chapter 1: Introduction and examples
- - *[Lecture Notes](https://github.com/gdlc/STT465/blob/master/STT465_1.pdf)*
+ - *[Lecture](https://github.com/gdlc/STT465/blob/master/STT465_1.pdf)*
  - *[Examples](https://github.com/gdlc/STT465/blob/master/examples_1.md)*
 
 ------------------------------------------------------------------
 ### Chapter 2: Belief, probability and exchangeability
- - *[Lecture Notes](https://github.com/gdlc/STT465/blob/master/STT465_1.pdf)*
+ - *[Lecture](https://github.com/gdlc/STT465/blob/master/STT465_2.pdf)*
  - *Examples*
- 
+-------------------------------------------------------------------
+
+### HW 1 (Due Wednesday Sept. 16, 10:00 am via e-mail to gustavoc@msu.edu) 
+  - [Homework 1](https://github.com/gdlc/STT465/blob/master/HW1_STT465.pdf)
+  - 
 ------------------------------------------------------------------
 ### Chapter 3: One-parameter models
 
- - *Lecture Notes*
+ - *Lecture*
  - *Examples*
 
 ------------------------------------------------------------------
 ### Chapter 4: Monte Carlo approximations
 
- - *Lecture Notes*
+ - *Lecture*
  - *Examples*
  
 ------------------------------------------------------------------
 ### Chapter 5: The normal model
 
- - *Lecture Notes*
+ - *Lecture*
  - *Examples*
 
 ------------------------------------------------------------------
 ### Chapter 6: Posterior approximation with the Gibbs sampler
 
- - *Lecture Notes*
+ - *Lecture*
  - *Examples*
 
 ------------------------------------------------------------------
 ### Chapter 7: The multivariate normal model
- - *Lecture Notes*
+ - *Lecture*
  - *Examples* 
  
 ------------------------------------------------------------------
@@ -57,16 +61,16 @@ In this course we follow closely the required textbook: "A first Course in Bayes
  
 ------------------------------------------------------------------
 ### Chapter 10: Nonconjugate priors and Metrop0olis-Hastings algorithms
- - *Lecture Notes*
+ - *Lecture*
  - *Examples* 
  
 ------------------------------------------------------------------
 ### Chapter 11: Linear and generalized linear mixed effects models
- - *Lecture Notes*
+ - *Lecture*
  - *Examples* 
 
 ------------------------------------------------------------------
 ### Chapter 12: Latent variable methods for ordinal data
- - *Lecture Notes*
+ - *Lecture*
  - *Examples* 
 
