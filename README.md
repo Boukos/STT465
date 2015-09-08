@@ -20,12 +20,13 @@ In this course we follow closely the required textbook: "A first Course in Bayes
 ### Chapter 2: Belief, probability and exchangeability
  - *[Lecture](https://github.com/gdlc/STT465/blob/master/STT465_2.pdf)*
  
- - *Examples*
 -------------------------------------------------------------------
 
-### HW 1 (Due Wednesday Sept. 16, 10:00 am via e-mail to gustavoc@msu.edu) 
+### HW 1
+
+(Due Wednesday Sept. 16, 10:00 am via e-mail to gustavoc@msu.edu) 
   - [Homework 1](https://github.com/gdlc/STT465/blob/master/HW1_STT465.pdf)
-  - 
+ 
 ------------------------------------------------------------------
 ### Chapter 3: One-parameter models
 
