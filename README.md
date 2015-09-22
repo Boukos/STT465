@@ -34,6 +34,7 @@ In this course we follow closely the required textbook: "A first Course in Bayes
 ### Chapter 4: Monte Carlo approximations
 
  - **Lecture](https://github.com/gdlc/STT465/blob/master/STT465_4.pdf)**
+ 
  - **[Examples](https://github.com/gdlc/STT465/blob/master/MC_Examples.md)**
  
 ------------------------------------------------------------------
