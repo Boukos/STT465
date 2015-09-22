@@ -2,9 +2,7 @@
 
 
 * **Instructor:** Gustavo de los Campos ( gustavoc@msu.edu )
-
 * **Time/Place:** MW 10:20am-11:40am A120 Wells Hall (WH)   
-
 * **[Syllabus](https://github.com/gdlc/STT465/blob/master/STT465_Syllabus.pdf)**
 * **[Required textbook](http://www.stat.washington.edu/people/pdhoff/book.php)**
 * **[R-software](http://www.r-project.org/)**
@@ -13,19 +11,19 @@ In this course we follow closely the required textbook: "A first Course in Bayes
 
 ------------------------------------------------------------------
 ### Chapter 1: Introduction and examples
- - *[Lecture](https://github.com/gdlc/STT465/blob/master/STT465_1.pdf)*
+ - **[Lecture](https://github.com/gdlc/STT465/blob/master/STT465_1.pdf)**
 
 ------------------------------------------------------------------
 ### Chapter 2: Belief, probability and exchangeability
- - *[Lecture](https://github.com/gdlc/STT465/blob/master/STT465_2.pdf)*
+ - **[Lecture](https://github.com/gdlc/STT465/blob/master/STT465_2.pdf)**
  
 -------------------------------------------------------------------
 
 ### HW 1
 
 (Due Wednesday Sept. 16, 10:00 am via e-mail to gustavoc@msu.edu) 
-  - [Homework 1](https://github.com/gdlc/STT465/blob/master/HW1_STT465.pdf)
-  - [Answerkey]()
+  - **[Homework 1](https://github.com/gdlc/STT465/blob/master/HW1_STT465.pdf)**
+  - **[Answerkey](https://github.com/gdlc/STT465/blob/master/HW1-Q1.xlsx)**
  
 ------------------------------------------------------------------
 ### Chapter 3: One-parameter models
@@ -35,14 +33,14 @@ In this course we follow closely the required textbook: "A first Course in Bayes
 ------------------------------------------------------------------
 ### Chapter 4: Monte Carlo approximations
 
- - *Lecture](https://github.com/gdlc/STT465/blob/master/STT465_2.pdf)*
- - *[Examples](https://github.com/gdlc/STT465/blob/master/MC_Examples.md)*
+ - **Lecture](https://github.com/gdlc/STT465/blob/master/STT465_4.pdf)**
+ - **[Examples](https://github.com/gdlc/STT465/blob/master/MC_Examples.md)**
  
 ------------------------------------------------------------------
 ### Chapter 5: The normal model
 
- - *Lecture*
- - *Examples*
+ - **Lecture]()**
+ - **Examples()**
 
 ------------------------------------------------------------------
 ### Chapter 6: Posterior approximation with the Gibbs sampler
