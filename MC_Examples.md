@@ -15,11 +15,16 @@
 ```
 
 
-#### Example 2: Compute the area in the unit square that satisfies y>=x^2
+#### Example 2: Computing the area in the unit square that satisfies y>=x^2
 
 ```R
 
 ```
+
+
+$$
+\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
+$$
 
 #### Example 3: 
 
