@@ -81,7 +81,7 @@
   mean(  x) #MC Estimate of the posterior mean
   aPost/bPost # true posterior mean
   mean(y)       # MLE
-  aPiror/bPrior # prior mean
+  aPrior/bPrior # prior mean
     
   ## Estimating the posterior density of log(lambda)
   y=log(x)
@@ -111,3 +111,4 @@
        log_condLikelihood[i]=sum(tmp)
     }
 ```
+[Home](https://github.com/gdlc/STT465/)
