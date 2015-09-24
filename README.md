@@ -43,6 +43,7 @@ In this course we follow closely the required textbook: "A first Course in Bayes
 (Due Wednesday Sept. 30th, bring a printed copy to the class or e-mail me a pdf at gustavoc@msu.edu) 
   - **[Homework 2](https://github.com/gdlc/STT465/blob/master/HW2_STT465.pdf)**
   - **[Gout data](https://github.com/gdlc/STT465/blob/master/gout.txt)**
+  - **[FAQs](https://github.com/gdlc/STT465/blob/master/FAQs_HW2.md)
  
 ------------------------------------------------------------------
 ### Chapter 5: The normal model
