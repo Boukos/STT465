@@ -35,6 +35,14 @@ In this course we follow closely the required textbook: "A first Course in Bayes
 
  - **[Lecture](https://github.com/gdlc/STT465/blob/master/STT465_4.pdf)**
  - **[Examples](https://github.com/gdlc/STT465/blob/master/MC_Examples.md)**
+
+-------------------------------------------------------------------
+
+### HW 2
+
+(Due Wednesday Sept. 30th, bring a printed copy to the class or e-mail me a pdf at gustavoc@msu.edu) 
+  - **[Homework 1](https://github.com/gdlc/STT465/blob/master/HW2_STT465.pdf)**
+  - **[Data](https://github.com/gdlc/STT465/blob/master/gout.txt)**
  
 ------------------------------------------------------------------
 ### Chapter 5: The normal model
