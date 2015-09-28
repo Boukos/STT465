@@ -54,14 +54,17 @@ In this course we follow closely the required textbook: "A first Course in Bayes
 ### Chapter 6: Posterior approximation with the Gibbs sampler
  - *Lecture*
  - *Examples*
+ 
 -------------------------------------------------------------------
 ### Review of Linear Algebra & Multivariate Normal 
   - *Lecture*
   - *Examples*
+  
 ------------------------------------------------------------------
 ### Chapter 7: The multivariate normal model
  - *Lecture*
  - *Examples* 
+ 
 ------------------------------------------------------------------
 ### Chapter 9: Linear regression
  - *Lecture Notes*
