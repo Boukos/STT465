@@ -48,27 +48,27 @@ In this course we follow closely the required textbook: "A first Course in Bayes
 ------------------------------------------------------------------
 ### Chapter 5: The normal model
 
- - **Lecture]()**
- - **Examples()**
+ - **[Lecture](https://github.com/gdlc/STT465/blob/master/STT465_5.pdf)**
 
 ------------------------------------------------------------------
 ### Chapter 6: Posterior approximation with the Gibbs sampler
-
  - *Lecture*
  - *Examples*
-
+-------------------------------------------------------------------
+### Review of Linear Algebra & Multivariate Normal 
+  - *Lecture*
+  - *Examples*
 ------------------------------------------------------------------
 ### Chapter 7: The multivariate normal model
  - *Lecture*
  - *Examples* 
- 
 ------------------------------------------------------------------
 ### Chapter 9: Linear regression
  - *Lecture Notes*
  - *Examples* 
  
 ------------------------------------------------------------------
-### Chapter 10: Nonconjugate priors and Metrop0olis-Hastings algorithms
+### Chapter 10: Nonconjugate priors and Metropolis-Hastings algorithms
  - *Lecture*
  - *Examples* 
  
