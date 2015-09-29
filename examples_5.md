@@ -53,3 +53,10 @@ with known variance.
  abline(v=c(mu0,meanY,postMean),col=c(1,4,2),lty=2)
  
 ```
+
+
+#### (2) Composition Sampling
+
+```R
+
+```
