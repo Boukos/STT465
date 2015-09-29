@@ -13,7 +13,7 @@ with known variance.
  
  ### Frequentist analysis
  ## Let's assume x is the population and let's sample from it
- n<-100
+ n<-5
  y=sample(x,size=n,replace=F)
  meanY=mean(y)
 
