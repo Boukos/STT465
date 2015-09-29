@@ -58,5 +58,63 @@ with known variance.
 #### (2) Composition Sampling
 
 ```R
-
+ y=scan('~/GitHub/STT465/bmi.txt')
+ n=length(y)
+ 
+ DF0=4
+ S0=var(y)*(DF0+2) # a bit of Bayesian 'cheating'; this gives E[var]=var(y)
+ mu0=28
+ k0=3
+ meanY=mean(y)
+ SS<-sum((y-meanY)^2)+ ((meanY-mu0)^2)*(n*k0/(k0+n))
+ S=S0+ SS
+ DF= n+DF0
+ 
+ nSamps=100000
+ mu=rep(NA,nSamps)
+ varE=rep(NA,nSamps)
+ 
+ for(i in 1:nSamps){
+  varE[i]=S/rchisq(n=1,df=DF)
+  v0=varE[i]/k0
+  C=n/varE[i]+1/v0
+  rhs<-meanY*n/varE[i] + mu0/v0
+  sol=rhs/C
+  mu[i]=rnorm(n=1,sd=sqrt(1/C),mean=sol) 
+  #print(i)
+ }
+ mean(varE)
 ```
+
+
+#### (3) Gibbs Sampler
+
+```R
+ mu_gibbs=rep(NA,nSamps+1)
+ varE_gibbs=rep(NA,nSamps+1)
+ 
+ mu_gibbs[1]<-mean(y)
+
+ for(i in 2:(nSamps+1)){
+  # sampling error variance conditional on the mean
+   SSy=sum((y-mu_gibbs[i-1])^2) 
+   S=SSy+S0
+   varE_gibbs[i]=S/rchisq(n=1,df=DF)
+  
+  # sampling the mean conditional on the error variance
+   C=n/varE_gibbs[i]+1/v0
+   rhs<-meanY*n/varE_gibbs[i] + mu0/v0
+   sol=rhs/C
+   mu_gibbs[i]=rnorm(n=1,sd=sqrt(1/C),mean=sol) 
+   #print(i)
+ }
+ 
+ mu_gibbs<-mu_gibbs[-1]
+ varE_gibbs<-varE_gibbs[-1]
+ 
+ mean(varE_gibbs)
+ 
+ plot(density(mu),col=2)
+ tmp=density(mu_gibbs)
+ lines(x=tmp$x,y=tmp$y,col=4)
+ 
