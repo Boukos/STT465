@@ -49,6 +49,7 @@ In this course we follow closely the required textbook: "A first Course in Bayes
 ### Chapter 5: The normal model
 
  - **[Lecture](https://github.com/gdlc/STT465/blob/master/STT465_5.pdf)**
+ - **[Examples](https://github.com/gdlc/STT465/blob/master/examples_5.md)**
 
 ------------------------------------------------------------------
 ### Chapter 6: Posterior approximation with the Gibbs sampler
