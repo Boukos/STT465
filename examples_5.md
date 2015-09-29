@@ -1,4 +1,4 @@
-### Examples Chapters 5 and 6
+### Examples Chapters 5
 
 #### (1) Inference on the mean, conditional on the variance
 
