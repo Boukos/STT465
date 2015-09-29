@@ -17,7 +17,7 @@ with known variance.
  y=sample(x,size=n,replace=F)
  meanY=mean(y)
 
-
+ # a grid of values for evaluating the likelihood function
  myGrid=seq(from=10,to=50,by=.1)
 
  logLik<-function(x,mu,var){
