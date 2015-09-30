@@ -18,7 +18,7 @@ with known variance.
  meanY=mean(y)
 
  # a grid of values for evaluating the likelihood function
- myGrid=seq(from=10,to=50,by=.1)
+ myGrid=seq(from=15,to=45,by=.1)
 
  logLik<-function(x,mu,var){
     tmp=sum(dnorm(x=x,mean=mu,sd=sqrt(var),log=TRUE))
@@ -29,8 +29,8 @@ with known variance.
  for(i in 1:length(myGrid)){
     likelihood[i]<-exp(logLik(x=y,mu=myGrid[i],var=varX))
  }
- plot(x=myGrid,y=likelihood,type='l', main='Likelihood', xlab='Mean',ylab='Likelihood')
- abline(v=meanY)
+ plot(x=myGrid,y=likelihood,type='l', main='Likelihood', xlab='Mean',ylab='Likelihood',col=4)
+ abline(v=meanY,col=4); abline(v=mean(x),col=2)
  
 
  ### Bahyesian analysis
@@ -53,8 +53,6 @@ with known variance.
  abline(v=c(mu0,meanY,postMean),col=c(1,4,2),lty=2)
  
 ```
-
-
 #### (2) Composition Sampling
 
 ```R
