@@ -1,4 +1,4 @@
-gender ldlsiu02
+sex ldl
 F 3.65443182
 F 2.05328393
 F 5.37844038
