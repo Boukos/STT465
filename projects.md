@@ -1,6 +1,6 @@
 ## Ideas for Final Project
 
-####Project 1											
+####Project 1	-----------------------------------------------------------------------------------------------------										
 
    **Title**: Multiple-Linear Regression with Binary Outcomes
 
