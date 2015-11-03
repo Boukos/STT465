@@ -2,15 +2,15 @@
 
 ####Project 1											
 
-**Title**: Multiple-Linear Regression with Binary Outcomes
+   **Title**: Multiple-Linear Regression with Binary Outcomes
 
-**Programming task**: implement a Gibbs sampler for a multiple-linear regression model and extend it to handle binary outcomes using the probit link.
+   **Programming task**: implement a Gibbs sampler for a multiple-linear regression model and extend it to handle binary outcomes using the probit link.
 
-**Analysis**:  using a real data set (this will be provided) analyze it using:
-    - glm()
-    - Your software
+   **Analysis**:  using a real data set (this will be provided) analyze it using:
+      - glm()
+      - Your software
     
-**Expected outcome**: a comparison of your results Compare your results with those obtained with glm.
+   **Expected outcome**: a comparison of your results Compare your results with those obtained with glm.
 
 ####Project 2											
 
