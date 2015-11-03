@@ -7,6 +7,7 @@
    **Programming task**: implement a Gibbs sampler for a multiple-linear regression model and extend it to handle binary outcomes using the probit link.
 
    **Analysis**:  using a real data set (this will be provided) analyze it using:
+   
       - glm()
       - Your software
     
@@ -20,6 +21,7 @@
 **Programming task**: implement a Gibbs sampler for a linear regression model and extend it to handle right, left and interval censoring.
 
 **Analysis**:  using a real data set (this will be provided) analyze it using:
+
     - lm(), ignoring censoring
     - Your software ignoring and accounting for censoring.
     
@@ -34,7 +36,8 @@
 **Programming task**: implement a Gibbs sampler for a linear regression model and extend it to handle two sets of predictors, one will be treated as fixed and the second one as random.
 
 **Analysis**:   using a real data set (this will be provided) analyze it using:
-   - BGLR
+
+   - BGLR()
    - Your software.
    
 **Expected outcome**: a comparison of your results Compare your results with those obtained with BGLR.
