@@ -1,7 +1,6 @@
 ## Ideas for Final Project
-
+-----------------------------------------------------------------------------------------------------	
 ####Project 1	
------------------------------------------------------------------------------------------------------										
 
    **Title**: Multiple-Linear Regression with Binary Outcomes
 
@@ -13,8 +12,8 @@
     
    **Expected outcome**: a comparison of your results Compare your results with those obtained with glm.
 
+-----------------------------------------------------------------------------------------------------	
 ####Project 2	
------------------------------------------------------------------------------------------------------												
 
 **Title**: Multiple-linear regression with censoring.
 
@@ -26,9 +25,9 @@
     
 **Expected outcome**: a comparison of your results with those provided by lm().
 
-
+-----------------------------------------------------------------------------------------------------	
 ####Project 3	
------------------------------------------------------------------------------------------------------											
+									
 
 **Title**: High dimensional regression.
 
@@ -40,8 +39,9 @@
    
 **Expected outcome**: a comparison of your results Compare your results with those obtained with BGLR.
 
+-----------------------------------------------------------------------------------------------------	
 ####Project 4	
------------------------------------------------------------------------------------------------------											
+
 
 **Title**: non-parametric regression and automatic knot selection using Bayesian models
 
