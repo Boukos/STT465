@@ -58,13 +58,16 @@ In this course we follow closely the required textbook: "A first Course in Bayes
  
 -------------------------------------------------------------------
 ### Review of Linear Algebra & Multivariate Normal 
+
   - **[Lecture](https://github.com/gdlc/STT465/blob/master/STT465_linearAlgebraReview.pdf)**
   
 ------------------------------------------------------------------
 ###  Multiple linear regression OLS and Maximum Likelihood
+
  - **[Lecture Notes](https://github.com/gdlc/STT465/blob/master/STT465_9.pdf)**
 ------------------------------------------------------------------ 
 ### The multivariate normal distribution & intro to Bayesian multiple linear regression
+
  - **[Slides set 1](https://github.com/gdlc/STT465/blob/master/STT465_10.pdf)**
  - **[Slides set 2](https://github.com/gdlc/STT465/blob/master/STT465_11.pdf)**
 ------------------------------------------------------------------
