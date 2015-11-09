@@ -45,3 +45,4 @@
 **Expected outcome**: a comparison of your results  with those obtained with lm().
 
 
+-----------------------------------------------------------------------------------------------------	
