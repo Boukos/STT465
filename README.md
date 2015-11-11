@@ -7,7 +7,22 @@
 * **[Required textbook](http://www.stat.washington.edu/people/pdhoff/book.php)**
 * **[R-software](http://www.r-project.org/)**
 
-In this course we follow closely the required textbook: "A first Course in Bayesian Statistical Methods" (P.D. Hoff). The following chapters will be covered.
+In this course we follow closely the required textbook: "A first Course in Bayesian Statistical Methods" (P.D. Hoff). 
+
+## HW
+
+  - **[Homework 1](https://github.com/gdlc/STT465/blob/master/HW1_STT465.pdf)**
+  - **[Homework 2](https://github.com/gdlc/STT465/blob/master/HW2_STT465.pdf)**
+     - *[Gout data](https://github.com/gdlc/STT465/blob/master/gout.txt)*
+  - **[Homework 3](https://github.com/gdlc/STT465/blob/master/HW3_STT465.pdf)**
+   - **[Homework 4](https://github.com/gdlc/STT465/blob/master/HW4_STT465.pdf)**
+
+
+------------------------------------------------------------------
+
+
+## Lectures
+
 
 ------------------------------------------------------------------
 ### Chapter 1: Introduction and examples
@@ -19,13 +34,6 @@ In this course we follow closely the required textbook: "A first Course in Bayes
  
 -------------------------------------------------------------------
 
-### HW 1
-
-(Due Wednesday Sept. 16, 10:00 am via e-mail to gustavoc@msu.edu) 
-  - **[Homework 1](https://github.com/gdlc/STT465/blob/master/HW1_STT465.pdf)**
-  - **[Answerkey](https://github.com/gdlc/STT465/blob/master/HW1-Q1.xlsx)**
- 
-------------------------------------------------------------------
 ### Chapter 3: One-parameter models
 
  - **[Lecture](https://github.com/gdlc/STT465/blob/master/STT465_3.pdf)**
@@ -38,14 +46,7 @@ In this course we follow closely the required textbook: "A first Course in Bayes
 
 -------------------------------------------------------------------
 
-### HW 2
 
-(Due Wednesday Sept. 30th, bring a printed copy to the class or e-mail me a pdf at gustavoc@msu.edu) 
-  - **[Homework 2](https://github.com/gdlc/STT465/blob/master/HW2_STT465.pdf)**
-  - **[Gout data](https://github.com/gdlc/STT465/blob/master/gout.txt)**
-  - **[FAQs](https://github.com/gdlc/STT465/blob/master/FAQs_HW2.md)**
- 
-------------------------------------------------------------------
 ### Chapter 5: The normal model
 
  - **[Lecture](https://github.com/gdlc/STT465/blob/master/STT465_5.pdf)**
