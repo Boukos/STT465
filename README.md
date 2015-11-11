@@ -13,9 +13,9 @@ In this course we follow closely the required textbook: "A first Course in Bayes
 
   - **[Homework 1](https://github.com/gdlc/STT465/blob/master/HW1_STT465.pdf)**
   - **[Homework 2](https://github.com/gdlc/STT465/blob/master/HW2_STT465.pdf)**
-     - *[Gout data](https://github.com/gdlc/STT465/blob/master/gout.txt)*
+    - *[Gout data](https://github.com/gdlc/STT465/blob/master/gout.txt)*
   - **[Homework 3](https://github.com/gdlc/STT465/blob/master/HW3_STT465.pdf)**
-   - **[Homework 4](https://github.com/gdlc/STT465/blob/master/HW4_STT465.pdf)**
+  - **[Homework 4](https://github.com/gdlc/STT465/blob/master/HW4_STT465.pdf)**
 
 
 ------------------------------------------------------------------
