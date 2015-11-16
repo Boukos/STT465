@@ -1,3 +1,4 @@
+SUBJECT.NAME PROJECT.NAME PHENOTYPE.NAME Obesity.BMI Obesity.BodyLength Date.Month Date.Year Date.Season Date.StudyStartSeconds Date.Hour Date.StudyDay GENDER EndNormalBW CoatColour CageDensity Litter cage
 A048005080 HS_mouse Obesity -0.52013166685422 8.2 5 2003 spring 9072000 0 106 F 25.3 black 5 2 19F
 A048006063 HS_mouse Obesity -0.401116443402858 8.2 3 2003 spring 5443200 0 64 M 31.6 dark.brown 5 4 13C
 A048006555 HS_mouse Obesity -0.526935426394781 8.1 4 2003 spring 6652800 0 78 M 28.2 silverado 4 1 15C
