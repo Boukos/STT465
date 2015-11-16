@@ -6,7 +6,7 @@
 
    **Programming task**: implement a Gibbs sampler for a multiple-linear regression model and extend it to handle binary outcomes using the probit link.
 
-   **Analysis**:  using a real data set (this will be provided) analyze it using OLS (lm) and your software.
+   **Analysis**:  using a real data set (this will be provided) analyze it using maximum likelihood (glm) and your Bayesian software.
     
    **Expected outcome**: a comparison of your results Compare your results with those obtained with glm.
 
@@ -21,6 +21,7 @@
 
 **Expected outcome**: a comparison of your results with those provided by lm().
 
+
 -----------------------------------------------------------------------------------------------------	
 ####Project 3	
 									
@@ -32,6 +33,7 @@
 **Analysis**:   using a real data set (this will be provided) analyze it using: BGLR() and your software.
 
 **Expected outcome**: a comparison of your results Compare your results with those obtained with BGLR.
+
 
 -----------------------------------------------------------------------------------------------------	
 ####Project 4	
