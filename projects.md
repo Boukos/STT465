@@ -4,18 +4,20 @@
 
    **Title**: Multiple-Linear Regression with Binary Outcomes
 
-   **Programming task**: implement a Gibbs sampler for a multiple-linear regression model and extend it to handle binary outcomes using the probit link.
+   **Programming task**: Implement a Gibbs sampler for a multiple-linear regression model and extend it to handle binary outcomes using the probit link.
 
-   **Analysis**:  using a real data set (this will be provided) analyze it using maximum likelihood (glm) and your Bayesian software.
+   **Analysis**:  Multiple linear regession of Gout (Yes/No) on: Uric Acid, Creatinine, BMI, Glucose, HDL, LDL, Triglycerides, Race, Sex and Age. 
     
-   **Expected outcome**: a comparison of your results Compare your results with those obtained with glm.
+   **Expected outcome**: A comparison of your results Compare your results with those obtained with glm().
+   
+   **[Data](https://github.com/gdlc/STT465/blob/master/gout.txt)**
 
 -----------------------------------------------------------------------------------------------------	
 ####Project 2	
 
 **Title**: Multiple-linear regression with censoring.
 
-**Programming task**: implement a Gibbs sampler for a linear regression model and extend it to handle right, left and interval censoring.
+**Programming task**: Implement a Gibbs sampler for a linear regression model and extend it to handle right, left and interval censoring.
 
 **Analysis**:  using a real data set (this will be provided) analyze it using OLS (lm) and your software, accounting and ignoring censoring.
 
