@@ -9,6 +9,7 @@
    **Analysis**:  Multiple linear regession of Gout (Yes/No) on: Uric Acid, Creatinine, BMI, Glucose, HDL, LDL, Triglycerides, Race, Sex and Age. 
     
    **Expected outcomes**: 
+      
        (1) Descriptive statistics for each variable and for the response against each predictor.
        (3) Estimates of effects and 95% CI derived from GLM (i.e., maximum likelihood).
        (4) Estimates of effects and 95 posterior crediblity regions derived froma Bayesian model.
