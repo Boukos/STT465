@@ -2,7 +2,7 @@
 
   The code below can be used to run a Gibbs Sampler for a linear model of the form
 
-    y=X1b2+X2b2+....+Xqbq+e
+    y = X1b1 + X2b2 +....+ Xqbq + e
 
 where:
    y (nx1) is the response
