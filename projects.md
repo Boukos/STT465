@@ -10,20 +10,25 @@
     
    **Expected outcomes**: 
        (1) Descriptive statistics for each variable and for the response against each predictor.
-       (3) Estimate and report point estimates and estimated 95% credibility regions for the change in risk of developing Gout for the following comparisons:
+       (3) Estimates of effects and 95% CI derived from GLM (i.e., maximum likelihood).
+       (4) Estimates of effects and 95 posterior crediblity regions derived froma Bayesian model.
+       (5) Estimated posterior means and estimated 95% credibility regions for the change in risk of developing Gout for the following comparisons:
               - Male versus Female
               - Black versus White
               - 1 SD unit fo each of the quantitative predictors.
-        In your results table, report: estimates derived from the Bayesian method and from glm (see code-below), both with probit link, and posterior 95% Confidence regions derived from the Bayesian method.
+        (6) A  2 paragraph summary of your findings.
+        (7) Appendix, including: (a) the code you use, and (b) convergence diagnosis (e.g., trace plots, density plots, MCErrors, etc.) for the Bayesian analyses.
         
+  Note: for the Bayesian analysis, treat effects as 'Fixed' and run a sufficiently long chain. For the glm analyses, a sample code is provided.  
+  
 ```R
  DATA=read.table('~/Dropbox/STT_465_FALL_2015/gout.txt',header=T,as.is=T)
  y=ifelse(DATA$Gout=='Y',1,0)
- fmGLM=glm(y~Age+BMI+Race+Sex+UricAcid+Glucose+Creatinine+SBP+LDL+HDL+SBP,data=DATA)
-
+ fmGLM=glm(y~Age+BMI+Race+Sex+UricAcid+Glucose+Creatinine+SBP+LDL+HDL+SBP,data=DATA,family=binomial(link=probit))
+ summary(fmGLM)
 ```
               
-   **Data](https://www.dropbox.com/s/ho3p0uwohjnoln3/gout.txt?dl=0)**
+   **[Data-link](https://www.dropbox.com/s/ho3p0uwohjnoln3/gout.txt?dl=0)**
 
 -----------------------------------------------------------------------------------------------------	
 ####Project 2	
