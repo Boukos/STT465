@@ -10,13 +10,13 @@
     
    **Expected outcomes**: 
       
-       (1) Descriptive statistics for each variable and for the response against each predictor.
+       * Descriptive statistics for each variable and for the response against each predictor.
        
-       (3) Estimates of effects and 95% CI derived from GLM (i.e., maximum likelihood).
+       * Estimates of effects and 95% CI derived from GLM (i.e., maximum likelihood).
        
-       (4) Estimates of effects and 95 posterior crediblity regions derived froma Bayesian model.
+       * Estimates of effects and 95 posterior crediblity regions derived froma Bayesian model.
        
-       (5) Estimated posterior means and estimated 95% credibility regions for the change in risk of developing Gout for:
+       * Estimated posterior means and estimated 95% credibility regions for the change in risk of developing Gout for:
        
               - Male versus Female
               
@@ -24,9 +24,9 @@
               
               - 2 point increase in Uric Acid
               
-        (6) A  2 paragraph summary of your findings.
+        * A  2 paragraph summary of your findings.
         
-        (7) Appendix, including: (a) the code you use, and (b) convergence diagnosis (e.g., trace plots, density plots, MC-Errors, etc.) for the Bayesian analyses.
+        * Appendix, including: (a) the code you use, and (b) convergence diagnosis (e.g., trace plots, density plots, MC-Errors, etc.) for the Bayesian analyses.
         
 Notes: for the Bayesian analysis, treat effects as 'Fixed' and run a sufficiently long chain. For the glm analysis, a sample code is provided. 
    
