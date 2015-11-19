@@ -23,7 +23,8 @@
 
 **Expected outcome**: a comparison of your results with those provided by lm().
 
-***[Data](https://www.dropbox.com/s/1rw7s4z1ta3kehy/DATA_STT465.RData?dl=0)**
+**[Data](https://www.dropbox.com/s/1rw7s4z1ta3kehy/DATA_STT465.RData?dl=0)**
+
 -----------------------------------------------------------------------------------------------------	
 
 ####Project 3	
