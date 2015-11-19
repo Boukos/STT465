@@ -51,6 +51,7 @@ The main goal is to assess wheather gene expression information derived from the
 	- An appendix with: (a) the code you use for analysis, and (b) convergence diagnostics for Bayesian analysis (trace plots, estimated MC-SEs, etc.).
 
 ```R
+  load('~/Dropbox/STT_465_FALL_2015/TCGA_GB/DATA_STT465.RData')
   library(survival)
   y<-Surv(time=log(Y$days_to_last_followup),event=Y$death)
   fmML=survreg(y~race+gender+initial_pathologic_diagnosis_method+age_group10,
