@@ -37,9 +37,9 @@ Notes: for the Bayesian analysis, treat effects as 'Fixed' and run a sufficientl
 
 **Title**: Multiple-linear regression with censoring.
 
-**Programming task**: Implement a Gibbs sampler for a linear regression model and extend it to handle right, left and interval censoring.
+**Programming task**: Implement a Gibbs sampler for a linear regression model and extend it to handle right censoring.
 
-**Analysis**:  using a real data set (this will be provided) analyze it using OLS (lm) and your software, accounting and ignoring censoring.
+**Analysis**: 
 
 **Expected outcome**: a comparison of your results with those provided by lm().
 
