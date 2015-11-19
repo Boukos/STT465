@@ -5,10 +5,10 @@
     y = X1b1 + X2b2 +....+ Xqbq + e
 
 where:
-   y (nx1) is the response
-   X=[X1,X2,...,Xq] is the incidence matrix for effects
-
-Errors are assumed to be iid normal. And the bj (j=1,..,q) are assumed to be normally and independently distributed with null mean and group-specific variance. Variances are assigned scaled-inverse chi-square priors.
+   - y (nx1) is the response
+   - X=[X1,X2,...,Xq] is the incidence matrix for effects
+   - b=[b1,...,bq] are effects,  assumed to be normally and independently distributed with null mean and group-specific variance. Variances are assigned scaled-inverse chi-square priors, and
+   - e are error terms, assumed to be iid normal. 
 
 ```R 
 ## Data
