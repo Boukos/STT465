@@ -20,7 +20,7 @@
 	- A  2 paragraph summary of your findings
 	- Appendix, including: (a) the code you use, and (b) convergence diagnosis (e.g., trace plots, density plots, MC-Errors, etc.) for the Bayesian analyses.
         
-Notes: for the Bayesian analysis, treat effects as 'Fixed' and run a sufficiently long chain. For the glm analysis, a sample code is provided. 
+Notes: for the Bayesian analysis, treat effects as 'Fixed' and run a sufficiently long chain. For the glm analysis, a sample code is provided below. 
    
   
 ```R
