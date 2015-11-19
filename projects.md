@@ -13,7 +13,7 @@
        (1) Descriptive statistics for each variable and for the response against each predictor.
        (3) Estimates of effects and 95% CI derived from GLM (i.e., maximum likelihood).
        (4) Estimates of effects and 95 posterior crediblity regions derived froma Bayesian model.
-       (5) Estimated posterior means and estimated 95% credibility regions for the change in risk of developing Gout for the following comparisons:
+       (5) Estimated posterior means and estimated 95% credibility regions for the change in risk of developing Gout for:
               - Male versus Female
               - Black versus White
               - 2 point increase in Uric Acid
