@@ -10,7 +10,7 @@
     
    **Expected outcome**: A comparison of your results Compare your results with those obtained with glm().
    
-   **[Data](https://github.com/gdlc/STT465/blob/master/gout.txt)**
+   **[Data](https://www.dropbox.com/s/ho3p0uwohjnoln3/gout.txt?dl=0)**
 
 -----------------------------------------------------------------------------------------------------	
 ####Project 2	
@@ -23,8 +23,9 @@
 
 **Expected outcome**: a comparison of your results with those provided by lm().
 
-
+***[Data](https://www.dropbox.com/s/1rw7s4z1ta3kehy/DATA_STT465.RData?dl=0)**
 -----------------------------------------------------------------------------------------------------	
+
 ####Project 3	
 									
 
@@ -35,7 +36,41 @@
 **Analysis**:   using a real data set (this will be provided) analyze it using: BGLR() and your software.
 
 **Expected outcome**: a comparison of your results Compare your results with those obtained with BGLR.
+```R
 
+
+library(BGLR)
+data(mice)
+nFolds=5
+y=scale(mice.pheno$Obesity.BMI)
+
+set.seed(12345)
+fold=sample(1:nFolds,size=length(y),replace=T)
+
+
+ETA=list(   fixed=list(~GENDER+Litter,data=mice.pheno,model='FIXED'),
+            cage=list(~cage,data=mice.pheno,model='BRR'),
+            markers=list(X=scale(mice.X), model='BRR')
+
+         )
+
+
+COR=matrix(nrow=nFolds,ncol=2)
+
+for(i in 1:nFolds){
+  print(i)
+  tst<-which(fold==i)
+  yNA=y
+  yNA[tst]<-NA
+  fm0=BGLR(y=yNA,ETA=ETA[c(1:2)],nIter=12000)
+  fmA=BGLR(y=yNA,ETA=ETA,nIter=12000)
+  
+  COR[i,1]<-cor(y[tst],fm0$yHat[tst])
+  COR[i,2]<-cor(y[tst],fmA$yHat[tst])
+  
+}
+
+```
 
 -----------------------------------------------------------------------------------------------------	
 ####Project 4	
