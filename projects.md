@@ -19,12 +19,13 @@
         (6) A  2 paragraph summary of your findings.
         (7) Appendix, including: (a) the code you use, and (b) convergence diagnosis (e.g., trace plots, density plots, MCErrors, etc.) for the Bayesian analyses.
         
-  Note: for the Bayesian analysis, treat effects as 'Fixed' and run a sufficiently long chain. For the glm analyses, a sample code is provided.  
+  Note: for the Bayesian analysis, treat effects as 'Fixed' and run a sufficiently long chain. For the glm analysis, a sample code is provided.  
   
 ```R
  DATA=read.table('~/Dropbox/STT_465_FALL_2015/gout.txt',header=T,as.is=T)
  y=ifelse(DATA$Gout=='Y',1,0)
- fmGLM=glm(y~Age+BMI+Race+Sex+UricAcid+Glucose+Creatinine+SBP+LDL+HDL+SBP,data=DATA,family=binomial(link=probit))
+ fmGLM=glm( y~Sex+Age+BMI+Race+Sex+UricAcid+Glucose+Creatinine+SBP+LDL+HDL+SBP+Triglycerides,
+            data=DATA,family=binomial(link=probit))
  summary(fmGLM)
 ```
               
