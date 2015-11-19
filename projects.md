@@ -15,11 +15,12 @@
        (5) Estimated posterior means and estimated 95% credibility regions for the change in risk of developing Gout for the following comparisons:
               - Male versus Female
               - Black versus White
-              - 1 SD unit fo each of the quantitative predictors.
+              - 2 point increase in Uric Acid
         (6) A  2 paragraph summary of your findings.
         (7) Appendix, including: (a) the code you use, and (b) convergence diagnosis (e.g., trace plots, density plots, MCErrors, etc.) for the Bayesian analyses.
         
-  Note: for the Bayesian analysis, treat effects as 'Fixed' and run a sufficiently long chain. For the glm analysis, a sample code is provided.  
+Notes: for the Bayesian analysis, treat effects as 'Fixed' and run a sufficiently long chain. For the glm analysis, a sample code is provided. 
+   
   
 ```R
  DATA=read.table('~/Dropbox/STT_465_FALL_2015/gout.txt',header=T,as.is=T)
