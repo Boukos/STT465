@@ -17,7 +17,7 @@
               - Black versus White
               - 2 point increase in Uric Acid
         (6) A  2 paragraph summary of your findings.
-        (7) Appendix, including: (a) the code you use, and (b) convergence diagnosis (e.g., trace plots, density plots, MCErrors, etc.) for the Bayesian analyses.
+        (7) Appendix, including: (a) the code you use, and (b) convergence diagnosis (e.g., trace plots, density plots, MC-Errors, etc.) for the Bayesian analyses.
         
 Notes: for the Bayesian analysis, treat effects as 'Fixed' and run a sufficiently long chain. For the glm analysis, a sample code is provided. 
    
@@ -40,7 +40,10 @@ Notes: for the Bayesian analysis, treat effects as 'Fixed' and run a sufficientl
 **Programming task**: Implement a Gibbs sampler for a linear regression model and extend it to handle right censoring.
 
 **Analysis**: 
-
+```R
+  fmML=survreg(y~race+gender+initial_pathologic_diagnosis_method+age_group10,
+               data=Y,dist='gaussian')
+```
 **Expected outcome**: a comparison of your results with those provided by lm().
 
 **[Data](https://www.dropbox.com/s/1rw7s4z1ta3kehy/DATA_STT465.RData?dl=0)**
