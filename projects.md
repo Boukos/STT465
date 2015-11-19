@@ -8,9 +8,22 @@
 
    **Analysis**:  Multiple linear regession of Gout (Yes/No) on: Uric Acid, Creatinine, BMI, Glucose, HDL, LDL, Triglycerides, Race, Sex and Age. 
     
-   **Expected outcome**: A comparison of your results Compare your results with those obtained with glm().
-   
-   **[Data](https://www.dropbox.com/s/ho3p0uwohjnoln3/gout.txt?dl=0)**
+   **Expected outcomes**: 
+       (1) Descriptive statistics for each variable and for the response against each predictor.
+       (3) Estimate and report point estimates and estimated 95% credibility regions for the change in risk of developing Gout for the following comparisons:
+              - Male versus Female
+              - Black versus White
+              - 1 SD unit fo each of the quantitative predictors.
+        In your results table, report: estimates derived from the Bayesian method and from glm (see code-below), both with probit link, and posterior 95% Confidence regions derived from the Bayesian method.
+        
+```R
+ DATA=read.table('~/Dropbox/STT_465_FALL_2015/gout.txt',header=T,as.is=T)
+ y=ifelse(DATA$Gout=='Y',1,0)
+ fmGLM=glm(y~Age+BMI+Race+Sex+UricAcid+Glucose+Creatinine+SBP+LDL+HDL+SBP,data=DATA)
+
+```
+              
+   **Data](https://www.dropbox.com/s/ho3p0uwohjnoln3/gout.txt?dl=0)**
 
 -----------------------------------------------------------------------------------------------------	
 ####Project 2	
