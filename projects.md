@@ -18,7 +18,7 @@
         	- Black versus White
         	- 2 point increase in Uric Acid
 	- A  2 paragraph summary of your findings
-	- Appendix, including: (a) the code you use, and (b) convergence diagnosis (e.g., trace plots, density plots, MC-Errors, etc.) for the Bayesian analyses.
+	- Appendix, including: (a) the code you use, and (b) convergence diagnosis (e.g., trace plots, density plots, MC-SEs, etc.) for the Bayesian analyses.
         
 Notes: for the Bayesian analysis, treat effects as 'Fixed' and run a sufficiently long chain. For the glm analysis, a sample code is provided below. 
    
@@ -38,16 +38,26 @@ Notes: for the Bayesian analysis, treat effects as 'Fixed' and run a sufficientl
 
 **Title**: Multiple-linear regression with censoring.
 
+The main goal is to assess wheather gene expression information derived from the tumor is associated to expected years of life after diagnosis of Glioblastoma. The [data set](https://www.dropbox.com/s/1rw7s4z1ta3kehy/DATA_STT465.RData?dl=0) provided contains survival information (days to last folowup and survival status at last follow up), a series of clinical predictors and 30 principal components derived from gene expression profiles assessed at the tumor cell.
+
 **Programming task**: Implement a Gibbs sampler for a linear regression model and extend it to handle right censoring.
 
-**Analysis**: 
+**Analysis**: Regression of survival time of Glioblastoma patients on clinical covariates and principal components derived from gene expression.
+
+**Expected outcomes**
+
+	- Estimated effects from a baseline model obtaiend by regressing survival time on clinical and demographic covariates. The report should include both results from g maximum likelihood (sruvreg, see sample code below) and Bayesian analysis. For maximum likelihood report parameter estimates and 95% confidence intervals. For Bayesian report estimated posterior means and estiamted 95% crediblity regions.
+	- Extend the baseline model by adding the random effects of the 30 principal components provided in the dataset. Estimate, using a  Bayesian model, the proportion of variance explained by the principal components, and assess which ones seem to have sronger association with survival.
+	- An appendix with: (a) the code you use for analysis, and (b) convergence diagnostics for Bayesian analysis (trace plots, estimated MC-SEs, etc.).
+
 ```R
+  library(survival)
+  y<-Surv(time=log(Y$days_to_last_followup),event=Y$death)
   fmML=survreg(y~race+gender+initial_pathologic_diagnosis_method+age_group10,
                data=Y,dist='gaussian')
+  summary(fmML)
+  
 ```
-**Expected outcome**: a comparison of your results with those provided by lm().
-
-**[Data](https://www.dropbox.com/s/1rw7s4z1ta3kehy/DATA_STT465.RData?dl=0)**
 
 -----------------------------------------------------------------------------------------------------	
 
