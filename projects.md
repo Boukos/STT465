@@ -47,9 +47,9 @@ The main goal is to assess wheather gene expression information derived from the
 
 **Expected outcomes**
 
-	- Estimated effects from a baseline model obtaiend by regressing survival time on clinical and demographic covariates. The report should include both results from g maximum likelihood (sruvreg, see sample code below) and Bayesian analysis. For maximum likelihood report parameter estimates and 95% confidence intervals. For Bayesian report estimated posterior means and estiamted 95% crediblity regions.
-	- Extend the baseline model by adding the random effects of the 30 principal components provided in the dataset. Estimate, using a  Bayesian model, the proportion of variance explained by the principal components, and assess which ones seem to have sronger association with survival.
-	- An appendix with: (a) the code you use for analysis, and (b) convergence diagnostics for Bayesian analysis (trace plots, estimated MC-SEs, etc.).
+- Estimated effects from a baseline model obtaiend by regressing survival time on clinical and demographic covariates. The report should include both results from g maximum likelihood (sruvreg, see sample code below) and Bayesian analysis. For maximum likelihood report parameter estimates and 95% confidence intervals. For Bayesian report estimated posterior means and estiamted 95% crediblity regions.
+- Extend the baseline model by adding the random effects of the 30 principal components provided in the dataset. Estimate, using a  Bayesian model, the proportion of variance explained by the principal components, and assess which ones seem to have sronger association with survival.
+- An appendix with: (a) the code you use for analysis, and (b) convergence diagnostics for Bayesian analysis (trace plots, estimated MC-SEs, etc.).
 
 ```R
   load('~/Dropbox/STT_465_FALL_2015/TCGA_GB/DATA_STT465.RData')
@@ -74,17 +74,16 @@ The main goal is to assess wheather gene expression information derived from the
 
 **Expected outcomes**: 
 
-	- A report of estimates of variance components (variance of random effects and error variances) and 95% posterior credibility regions for M0 and M1.
-	- A comparison of prediction accuracy (cross-validation prediction correlation) of models M1 and M2 derived from a 5 fold cross-validation.
-	- A 2 paragraph summary statment sumarizing your findings.
-	- An appendix including: (a) convergence diagnostics (trace plots, estimates of MC SEs, etc.), and (b) the code used to carry out analyses.
+- A report of estimates of variance components (variance of random effects and error variances) and 95% posterior credibility regions for M0 and M1.
+- A comparison of prediction accuracy (cross-validation prediction correlation) of models M1 and M2 derived from a 5 fold cross-validation.
+- A 2-paragraph summary statment sumarizing your findings.
+- An appendix including: (a) convergence diagnostics (trace plots, estimates of MC SEs, etc.), and (b) the code used to carry out analyses.
 
 Note: in your analyses treat sex and litter size as 'fixed effects' and the effects of cages and of DNA markers as random. Assign two different variance components for markers and cage.
 
 The code below illustrate how to obtain the data from the BGLR package.
 
 ```R
-
 library(BGLR)
 data(mice)
 nFolds=5
