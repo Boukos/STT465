@@ -20,7 +20,7 @@
 	- A  2 paragraph summary of your findings
 	- Appendix, including: (a) the code you use, and (b) convergence diagnosis (e.g., trace plots, density plots, MC-SEs, etc.) for the Bayesian analyses.
         
-Notes: for the Bayesian analysis, treat effects as 'Fixed' and run a sufficiently long chain. For the glm analysis, a sample code is provided below. 
+Note: for the Bayesian analysis, treat effects as 'Fixed' and run a sufficiently long chain. For the glm analysis, a sample code is provided below. 
    
   
 ```R
@@ -67,51 +67,54 @@ The main goal is to assess wheather gene expression information derived from the
 
 **Title**: High dimensional regression.
 
-**Programming task**: implement a Gibbs sampler for a linear regression model and extend it to handle two sets of predictors, one will be treated as fixed and the second one as random.
+**Programming task**: implement a Gibbs sampler for a multiple linear regression model with arbitrary sets of effets, and extend it to handle missing values on the response.
 
-**Analysis**:   using a real data set (this will be provided) analyze it using: BGLR() and your software.
+**Analysis**:  Compare, using cross-validation, a high-dimensional regression accounting for systematic and environmental effects (M0, regression of BMI on sex, litter size and cage) with one that includes both environmental and genetic effects (M1, regression of BMI on sex, litter size, cage and genetic markers).
 
-**Expected outcome**: a comparison of your results Compare your results with those obtained with BGLR.
+**Expected outcomes**: 
+
+	- A report of estimates of variance components (variance of random effects and error variances) and 95% posterior credibility regions for M0 and M1.
+	- A comparison of prediction accuracy (cross-validation prediction correlation) of models M1 and M2 derived from a 5 fold cross-validation.
+	- A 2 paragraph summary statment sumarizing your findings.
+	- An appendix including: (a) convergence diagnostics (trace plots, estimates of MC SEs, etc.), and (b) the code used to carry out analyses.
+
+Note: in your analyses treat sex and litter size as 'fixed effects' and the effects of cages and of DNA markers as random. Assign two different variance components for markers and cage.
+
+The code below illustrate how to obtain the data from the BGLR package.
+
 ```R
-
 
 library(BGLR)
 data(mice)
 nFolds=5
 y=scale(mice.pheno$Obesity.BMI)
-
 set.seed(12345)
-fold=sample(1:nFolds,size=length(y),replace=T)
+fold=sample(1:nFolds,size=length(y),replace=T) # this vector randomly assigns each mice to a fold
 
-
-ETA=list(   fixed=list(~GENDER+Litter,data=mice.pheno,model='FIXED'),
-            cage=list(~cage,data=mice.pheno,model='BRR'),
-            markers=list(X=scale(mice.X), model='BRR')
-
-         )
-
+XF=as.matrix(model.matrix(~GENDER+Litter))[,-1]
+XCage<-as.matrix(model.matrix(~cage-1))
+XMarkers<-scale(mice.X)
 
 COR=matrix(nrow=nFolds,ncol=2)
-
 for(i in 1:nFolds){
   print(i)
-  tst<-which(fold==i)
+  tst<-which(fold==i) # this determines which entries of y are used for testing in the ith fold.
   yNA=y
   yNA[tst]<-NA
-  fm0=BGLR(y=yNA,ETA=ETA[c(1:2)],nIter=12000)
-  fmA=BGLR(y=yNA,ETA=ETA,nIter=12000)
-  
+  fm0=BGLR(y=yNA,ETA=list(list(X=XF,model='FIXED'),list(X=XCage,model='BRR')),nIter=12000)
+  fmA=BGLR(y=yNA,ETA=list(list(X=XF,model='FIXED'),list(X=XCage,model='BRR'),list(X=XMarkers,model='BRR')),nIter=12000)
   COR[i,1]<-cor(y[tst],fm0$yHat[tst])
   COR[i,2]<-cor(y[tst],fmA$yHat[tst])
-  
 }
+
+
 
 ```
 
 -----------------------------------------------------------------------------------------------------	
 ####Project 4	
 
-**Title**: non-parametric regression and automatic knot selection using Bayesian models
+**Title**: Non-parametric regression and automatic knot selection using Bayesian models
 
 **Programming task**: implement a Gibbs Sampler for a linear regression model, using a simulated data set (this will be provided) compare the use of natural splines with different degree of freedom and with the Bayesian approach.
 
