@@ -6,7 +6,8 @@
 
    **Programming task**: Implement a Gibbs sampler for a multiple-linear regression model and extend it to handle binary outcomes using the probit link.
 
-   **Analysis**:  Multiple linear regession of Gout (Yes/No) on: Uric Acid, Creatinine, BMI, Glucose, HDL, LDL, Triglycerides, Race, Sex and Age. 
+   **Analysis**:  Multiple linear regession of Gout (Yes/No) on: Uric Acid, Creatinine, BMI, Glucose, HDL, LDL, 
+                Triglycerides, Race, Sex and Age. 
     
    **Expected outcomes**: 
    
@@ -91,9 +92,9 @@ y=scale(mice.pheno$Obesity.BMI)
 set.seed(12345)
 fold=sample(1:nFolds,size=length(y),replace=T) # this vector randomly assigns each mice to a fold
 
-XF=as.matrix(model.matrix(~GENDER+Litter))[,-1]
-XCage<-as.matrix(model.matrix(~cage-1))
-XMarkers<-scale(mice.X)
+XF=as.matrix(model.matrix(~GENDER+Litter,data=mice.pheno))[,-1]
+XCage<-as.matrix(model.matrix(~cage-1,data=mice.pheno))
+XMarkers<-scale(mice.X)/sqrt(ncol(mice.X))
 
 COR=matrix(nrow=nFolds,ncol=2)
 for(i in 1:nFolds){
@@ -106,8 +107,6 @@ for(i in 1:nFolds){
   COR[i,1]<-cor(y[tst],fm0$yHat[tst])
   COR[i,2]<-cor(y[tst],fmA$yHat[tst])
 }
-
-
 
 ```
 
