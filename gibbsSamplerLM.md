@@ -15,9 +15,10 @@ where:
   ## Read data here, the code below expects:
       # y (nx1) the response
       # X (nxp) an incidence matrix of effects 
-      # groups (px1) grouping of effects 
-      # isRandom (nGroupsx1) are the effects of the group random?
-
+      # groups (px1) grouping of effects (integers from 1 to q, p of them mapping effects into groups)
+      # isRandom (qx1) are the effects of the group random?
+      # Example if you have two groups of effects, with incidence matrices X1 and X2, the first one random the 2nd one fixed,
+      # then:  X=cbind(X1,X2) ; groups=c(rep(1,ncol(X1)),rep(2,ncol(X2))); isRandom=c(TRUE,FALSE)
 ## Parameters
   nIter<-120 # use more iterations, this is just for illustration
   df0<-1  # df0 and R0 are used to determine
