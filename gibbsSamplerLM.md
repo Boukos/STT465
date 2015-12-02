@@ -81,21 +81,35 @@ gibbsLM<-function(y,X,gropus,isRandom,nIter, df0=1,R0=.5,vervose=T){
     	if(nNA>0){
       		error[whichNA]<-rnorm(n=nNA,mean=0,sd=sqrt(varE[i]))
     	}
-    
    		if(verbose){ print(c(i, ' ' ,round(varE[i],3))) }
-
  	}
 
   	OUT=list(varE=varE,varB=varB,B=B)
 }
 
 
-```R 
+```
 
 
 
 ```R
-
-
+ library(BGLR)
+ data(wheat)
+ X=cbind(1,wheat.X)
+ y=wheat.Y[,1]
+ 
+ tst=sample(1:nrow(X),size=150)
+ 
+ 
+ yTRN=y[-tst]
+ XTRN=X[-tst,]
+ yTST=y[tst]
+ XTST=y[tst]
+ burnIn=1000
+ 
+ fm=samples=gibbsLM(y=y,X=X,gropus=c(1,rep(2,ncol(X)-1)),isRandom=c(FALSE,TRUE),nIter=11000,R20=.5)
+ bHat=colMeans(fm$B[-(1:burnIn),]
+ yHatTST=XTST%*%bHat
+ cor(yTST,yHatTST)
  
 ```
