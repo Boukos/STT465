@@ -1,5 +1,14 @@
 ### Gibbs sampler for a muliple linear regression with 'fixed' and random effectslinear
 
+
+```R
+gibbsLM<-function(y,X,gropus,isRandom,nIter, df0=1,R0=.5,vervose=T){
+
+
+
+  OUT=list(varE=varE,varB=varB,B=B)
+}
+
   The code below can be used to run a Gibbs Sampler for a linear model of the form
 
     y = X1b1 + X2b2 +....+ Xqbq + e
