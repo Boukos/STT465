@@ -1,5 +1,11 @@
 ### A Gibbs Sampler for linear regression with right-censored data
 
+
+**Disclaimer**: this code was develped for teaching purpouses and it is not fully checked. 
+For a fully checked software for Bayesian regression see [BGLR](https://cran.r-project.org/web/packages/BGLR/index.html).
+
+Contact: gustavoc@msu.edu
+
 ```R
 
 gibbsLM_RC<-function(y,d,X,groups,isRandom,R20=.5,df0=1,verbose=TRUE,nIter=150){
