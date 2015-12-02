@@ -1,8 +1,18 @@
-### A Gibbs Sampler for linear regression with right-censored data
+### A Gibbs Sampler for linear regression with binary outcomes
 
+
+```R
 
 ## Libraries
  library(bayesm)
+
+## A wrapper for sampling truncated normal
+rtrun2<-function(sigma,mu,bounds){
+	rtrun(sigma=sigma,mu=mu,a=bounds[1],b=bounds[2])
+}
+rTruncNormal<-function(sigma,mu,a,b){
+	apply(rtrun2,sigma=1,mu=0,X=cbind(a,b),MARGIN=1)
+}
 
 ## Data
   ## Read data here, the code below expects:
@@ -19,14 +29,7 @@
   data(wheat)
   X=cbind(1,svd(scale(wheat.X))$u[,1:10])
   y0=wheat.Y[,1]
-  d=as.integer(y0<0)
-  y=y0
-  y[d==0]
-  threshold=0
-  d=ifelse(y0<threshold,1,0)
-  y=y0
-  y[d==0]=threshold
- 
+  y=ifelse(y0>0,1,0)
   groups=rep(1,ncol(X))
   isRandom=FALSE
  }
@@ -43,32 +46,28 @@
    nGroups<-length(unique(groups))
 
 ## Calculating hyper-parameters
-  Se<-var(y ,na.rm=T)*(1-R20)*(df0+2)
-  Sb<-var(y,na.rm=T)*R20/ncol(X)*(df0+2)
+  Sb<-R20/ncol(X)*(df0+2)
   p<-as.numeric(table(groups))
-
-## determining # of censored points
-  whichCensored=which(d==0) #*#
-  nCensored=length(d)  #*#
 
 # Objects that will store samples
  B<-matrix(nrow=nIter, ncol=sum(p),0)
- varE<-rep(NA,nIter)
  varB<-matrix(nrow=nIter,ncol=nGroups)
 
 # some useful computations
- postDFe<-nrow(X)+df0
  postDFb<-p+df0
  sumSqX=colSums(X^2)
 
 # Initialization
 
- B[1,1]=mean(y,na.rm=TRUE) # initialize intercept to mean(y) and other effects to zero
- varE[1]=var(y,na.rm=TRUE)*(1-R20)
+ B[1,1]=qnorm(p=mean(y)) # initialize intercept to match the observed mean(y) and other effects to zero
  varB[1,]=Sb/(df0+2)
- error<-y-mean(y,na.rm=TRUE)
- if(nCensored>0){ error[whichCensored]=0 }
-
+ 
+ isOne<-y==1
+ Xb=X%*%B[1,]
+ a<-ifelse(isOne,-Xb,-Inf)
+ b<-ifelse(isOne,Inf,-Xb)
+ error<-rTruncNormal(sigma=1,mu=0,a=a,b=b)
+ 
  for(i in 1:nGroups){
     varB[,i]<-ifelse(isRandom[i],varB[,i],1e4)
  }
@@ -78,10 +77,6 @@
 
 # Gibbs Sampler
  for(i in 1:nIter){
-
-   # sampling error variance
-   S=sum(error^2)+Se
-   varE[i]<-S/rchisq(df=postDFe,n=1)
 
    # sampling  paramters by group
    for(j in 1:nGroups){
@@ -97,23 +92,24 @@
     for(j in 1:ncol(X)){
         xj=X[,j]
         error<-error+xj*beta[j]
-        C=sumSqX[j]/varE[i]+1/varB[i,groups[j]]
-        rhs<-sum(xj*error)/varE[i]
+        C=sumSqX[j]+1/varB[i,groups[j]]
+        rhs<-sum(xj*error)
         sol<-rhs/C
         beta[j]<-sol+z[j]/sqrt(C)
         error<-error-xj*beta[j]
     } 
     B[i,]=beta
 
-    if(nCensored>0){#*# sampling censored points from truncated normal
-      Xb=X%*%beta
-      lowerBound=y[whichCensored]-Xb[whichCensored]
-      error[whichCensored]<-unlist(lapply(FUN=rtrun,X=lowerBound,mu=0,sigma=sqrt(varE[i]),b=Inf))
-    }
-
-   if(verbose){ cat(i,round(varE[i],3),'\n') }
+    Xb=X%*%beta
+     a<-ifelse(isOne,-Xb,-Inf)
+ 	b<-ifelse(isOne,Inf,-Xb)
+ 	error<-rTruncNormal(sigma=1,mu=0,a=a,b=b)
+ 
+   if(verbose){ cat(i,'\n') }
 
  }
  
  
+ 
+ ```
  
