@@ -95,9 +95,9 @@ gibbsLM_RC<-function(y,d,X,groups,isRandom,R20=.5,df0=1,verbose=TRUE,nIter=150){
  
  ```
  
- ### Example
+### Example
  
- The following example illustrates how to use the Gibbs sampler defined in the above function and compare results for a fixed effects regression with Maximum Likelihood Estimates.
+The following example illustrates how to use the Gibbs sampler defined in the above function and compare results for a fixed effects regression with Maximum Likelihood Estimates.
  
  ```R
  	## Example: regression of wheat yield on 20 marker-derived principal components
