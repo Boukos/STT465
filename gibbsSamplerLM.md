@@ -3,7 +3,7 @@
 
 ```R
 
-gibbsLM<-function(y,X,gropus,isRandom,nIter, df0=1,R0=.5,vervose=T){
+gibbsLM<-function(y,X,groups,isRandom,nIter, df0=1,R20=.5,verbose=T){
 
    	## Inputs
 	# y (nx1) the response, can have NAs.
@@ -13,9 +13,9 @@ gibbsLM<-function(y,X,gropus,isRandom,nIter, df0=1,R0=.5,vervose=T){
     # Example if you have two groups of effects, with incidence matrices X1 and X2, the first one random the 2nd one fixed,
     # then:  X=cbind(X1,X2) ; groups=c(rep(1,ncol(X1)),rep(2,ncol(X2))); isRandom=c(TRUE,FALSE)
 
-   ## Renumbering groups from 1:K
-   groups<-as.integer(as.factor(groups))
-   nGroups<-length(unique(groups))
+    ## Renumbering groups from 1:K
+    groups<-as.integer(as.factor(groups))
+    nGroups<-length(unique(groups))
 
 	## Calculating hyper-parameters
   	Se<-var(y ,na.rm=T)*(1-R20)*(df0+2)
@@ -90,7 +90,9 @@ gibbsLM<-function(y,X,gropus,isRandom,nIter, df0=1,R0=.5,vervose=T){
 
 ```
 
+###  Example
 
+Fitting a regression to a training data set and evaluating prediction accuracy in a testing data set.
 
 ```R
  library(BGLR)
@@ -104,11 +106,11 @@ gibbsLM<-function(y,X,gropus,isRandom,nIter, df0=1,R0=.5,vervose=T){
  yTRN=y[-tst]
  XTRN=X[-tst,]
  yTST=y[tst]
- XTST=y[tst]
+ XTST=X[tst,]
  burnIn=1000
  
- fm=samples=gibbsLM(y=y,X=X,gropus=c(1,rep(2,ncol(X)-1)),isRandom=c(FALSE,TRUE),nIter=11000,R20=.5)
- bHat=colMeans(fm$B[-(1:burnIn),]
+ fm=samples=gibbsLM(y=yTRN,X=XTRN,groups=c(1,rep(2,ncol(X)-1)),isRandom=c(FALSE,TRUE),nIter=11000,R20=.5)
+ bHat=colMeans(fm$B[-(1:burnIn),])
  yHatTST=XTST%*%bHat
  cor(yTST,yHatTST)
  
