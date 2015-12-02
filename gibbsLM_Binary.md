@@ -4,6 +4,10 @@
 
 ### A Gibbs Sampler for linear regression with binary outcomes
 
+**Disclaimer**: this code was develped for teaching purpouses and it is not fully checked. 
+For a fully checked software for Bayesian regression see [BGLR](https://cran.r-project.org/web/packages/BGLR/index.html).
+
+Contact: gustavoc@msu.edu
 
 ```R
 
