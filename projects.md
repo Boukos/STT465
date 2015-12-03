@@ -36,7 +36,9 @@ Note: for the Bayesian analysis, treat effects as 'Fixed' and run a sufficiently
    
    **[Gibbs Sampler for Binary Outcomes](https://github.com/gdlc/STT465/blob/master/gibbsLM_Binary.md)**
 
+
 -----------------------------------------------------------------------------------------------------	
+
 ####Project 2	
 
 **Title**: Multiple-linear regression with censoring.
@@ -62,7 +64,9 @@ The main goal is to assess wheather gene expression information derived from the
   summary(fmML)
   
 ```
-  **[Gibbs Sampler for Right-Censored Outcomes](https://github.com/gdlc/STT465/blob/master/gibbsLM_Censored.md)**
+
+**[Gibbs Sampler for Right-Censored Outcomes](https://github.com/gdlc/STT465/blob/master/gibbsLM_Censored.md)**
+
 -----------------------------------------------------------------------------------------------------	
 
 ####Project 3	
