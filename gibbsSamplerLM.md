@@ -5,8 +5,8 @@
 
 gibbsLM<-function(y,X,groups,isRandom,nIter, df0=1,R20=.5,verbose=T){
 
-   	## Inputs
-	# y (nx1) the response, can have NAs.
+    ## Inputs
+    # y (nx1) the response, can have NAs.
     # X (nxp) an incidence matrix of effects 
     # groups (px1) grouping of effects (integers from 1 to q, p of them mapping effects into groups)
     # isRandom (qx1) are the effects of the group random?
@@ -98,15 +98,11 @@ Fitting a regression to a training data set and evaluating prediction accuracy i
  data(wheat)
  X=cbind(1,wheat.X)
  y=wheat.Y[,1]
- 
  tst=sample(1:nrow(X),size=150)
- 
  yNA=y
  yNA[tst]=NA
  fm2=samples=gibbsLM(y=yNA,X=X,groups=c(1,rep(2,ncol(X)-1)),isRandom=c(FALSE,TRUE),nIter=3000,R20=.5)
  bHat2=colMeans(fm2$B[-(1:burnIn),])
  yHat=X%*%bHat2
  cor(y[tst],yHat[tst])
-
-
 ```
