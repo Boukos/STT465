@@ -81,7 +81,7 @@ gibbsLM<-function(y,X,groups,isRandom,nIter, df0=1,R20=.5,verbose=T){
     	if(nNA>0){
       		error[whichNA]<-rnorm(n=nNA,mean=0,sd=sqrt(varE[i]))
     	}
-   		if(verbose){ print(c(i, ' ' ,round(varE[i],3))) }
+   		if(verbose){ cat(i,round(varE[i],3),'\n') }
  	}
   	OUT=list(varE=varE,varB=varB,B=B)
 }
