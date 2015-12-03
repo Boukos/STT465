@@ -89,7 +89,7 @@ Note: in your analyses treat sex and litter size as 'fixed effects' and the effe
 
 The code below illustrate how to obtain the data from the BGLR package, and how to fit models using the Gibbs Sampler developed in class.
 
-[Gibbs Sampler Linear Regression](https://github.com/gdlc/STT465/blob/master/gibbsSamplerLM.md)
+**[Gibbs Sampler Linear Regression](https://github.com/gdlc/STT465/blob/master/gibbsSamplerLM.md)**
 
 ```R
 library(BGLR)
