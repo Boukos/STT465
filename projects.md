@@ -33,6 +33,8 @@ Note: for the Bayesian analysis, treat effects as 'Fixed' and run a sufficiently
 ```
               
    **[Data-link](https://www.dropbox.com/s/ho3p0uwohjnoln3/gout.txt?dl=0)**
+   
+   **[Gibbs Sampler for Binary Outcomes](https://github.com/gdlc/STT465/blob/master/gibbsLM_Binary.md)**
 
 -----------------------------------------------------------------------------------------------------	
 ####Project 2	
@@ -60,7 +62,7 @@ The main goal is to assess wheather gene expression information derived from the
   summary(fmML)
   
 ```
-
+  **[Gibbs Sampler for Right-Censored Outcomes](https://github.com/gdlc/STT465/blob/master/gibbsLM_Censored.md)**
 -----------------------------------------------------------------------------------------------------	
 
 ####Project 3	
@@ -81,7 +83,9 @@ The main goal is to assess wheather gene expression information derived from the
 
 Note: in your analyses treat sex and litter size as 'fixed effects' and the effects of cages and of DNA markers as random. Assign two different variance components for markers and cage.
 
-The code below illustrate how to obtain the data from the BGLR package.
+The code below illustrate how to obtain the data from the BGLR package, and how to fit models using the Gibbs Sampler developed in class.
+
+[Gibbs Sampler Linear Regression](https://github.com/gdlc/STT465/blob/master/gibbsSamplerLM.md)
 
 ```R
 library(BGLR)
@@ -93,18 +97,30 @@ fold=sample(1:nFolds,size=length(y),replace=T) # this vector randomly assigns ea
 
 XF=as.matrix(model.matrix(~GENDER+Litter,data=mice.pheno))[,-1]
 XCage<-as.matrix(model.matrix(~cage-1,data=mice.pheno))
-XMarkers<-scale(mice.X)/sqrt(ncol(mice.X))
-
+PC=scale(svd(scale(mice.X),nu=500,nv=0)$u)/10
 COR=matrix(nrow=nFolds,ncol=2)
+
 for(i in 1:nFolds){
   print(i)
   tst<-which(fold==i) # this determines which entries of y are used for testing in the ith fold.
   yNA=y
   yNA[tst]<-NA
-  fm0=BGLR(y=yNA,ETA=list(list(X=XF,model='FIXED'),list(X=XCage,model='BRR')),nIter=12000)
-  fmA=BGLR(y=yNA,ETA=list(list(X=XF,model='FIXED'),list(X=XCage,model='BRR'),list(X=XMarkers,model='BRR')),nIter=12000)
-  COR[i,1]<-cor(y[tst],fm0$yHat[tst])
-  COR[i,2]<-cor(y[tst],fmA$yHat[tst])
+  
+  # Fitting model without markers
+  samples_H0<-gibbsLM(	y=yNA,X=cbind(XF,XCage),
+  			groups=c(rep(1,ncol(XF)),rep(2,ncol(XCage))),
+  			isRandom=c(FALSE,TRUE),nIter=1500,R20=.5)
+  bHat_H0=colMeans(samples_H0$B[-c(1:500),])
+  yHat_H0=cbind(XF,XCage)%*%bHat_H0
+  
+  # Fitting model without markers
+  samples_HA<-gibbsLM(	y=yNA,X=cbind(XF,XCage,PC),
+  			groups=c(rep(1,ncol(XF)),rep(2,ncol(XCage)),rep(3,ncol(PC))),
+  			isRandom=c(FALSE,TRUE,TRUE),nIter=1500,R20=.5)
+  bHat_HA=colMeans(samples_HA$B[-c(1:500),])
+  yHat_HA=cbind(XF,XCage,PC)%*%bHat_HA
+  COR[i,1]<-cor(y[tst],yHat_H0[tst])
+  COR[i,2]<-cor(y[tst],yHat_HA[tst])
 }
 
 ```
