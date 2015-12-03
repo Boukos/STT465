@@ -83,7 +83,6 @@ gibbsLM<-function(y,X,groups,isRandom,nIter, df0=1,R20=.5,verbose=T){
     	}
    		if(verbose){ print(c(i, ' ' ,round(varE[i],3))) }
  	}
-
   	OUT=list(varE=varE,varB=varB,B=B)
 }
 
@@ -102,16 +101,12 @@ Fitting a regression to a training data set and evaluating prediction accuracy i
  
  tst=sample(1:nrow(X),size=150)
  
- 
- yTRN=y[-tst]
- XTRN=X[-tst,]
- yTST=y[tst]
- XTST=X[tst,]
- burnIn=1000
- 
- fm=samples=gibbsLM(y=yTRN,X=XTRN,groups=c(1,rep(2,ncol(X)-1)),isRandom=c(FALSE,TRUE),nIter=11000,R20=.5)
- bHat=colMeans(fm$B[-(1:burnIn),])
- yHatTST=XTST%*%bHat
- cor(yTST,yHatTST)
- 
+ yNA=y
+ yNA[tst]=NA
+ fm2=samples=gibbsLM(y=yNA,X=X,groups=c(1,rep(2,ncol(X)-1)),isRandom=c(FALSE,TRUE),nIter=3000,R20=.5)
+ bHat2=colMeans(fm2$B[-(1:burnIn),])
+ yHat=X%*%bHat2
+ cor(y[tst],yHat[tst])
+
+
 ```
