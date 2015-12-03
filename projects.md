@@ -91,6 +91,9 @@ The code below illustrate how to obtain the data from the BGLR package, and how 
 
 **[Gibbs Sampler Linear Regression](https://github.com/gdlc/STT465/blob/master/gibbsSamplerLM.md)**
 
+### Example of how to implement a CV.
+
+
 ```R
 library(BGLR)
 data(mice)
@@ -101,8 +104,19 @@ fold=sample(1:nFolds,size=length(y),replace=T) # this vector randomly assigns ea
 
 XF=as.matrix(model.matrix(~GENDER+Litter,data=mice.pheno))[,-1]
 XCage<-as.matrix(model.matrix(~cage-1,data=mice.pheno))
-PC=scale(svd(scale(mice.X),nu=500,nv=0)$u)/10
+
+## Computing principal components for the markers
+G=tcrossprod(scale(mice.X))
+G=G/mean(diag(G))
+EVD=eigen(G)
+PC=EVD$vectors[,1:(nrow(G)-1)]
+for(i in 1:ncol(PC)){ PC[,i]=PC[,i]*sqrt(EVD$values[i])}
+PC=svd(scale(mice.X),nu=500,nv=0)$u)
+
+
 COR=matrix(nrow=nFolds,ncol=2)
+
+**This loop fits models for each of the folds of the cross-validation and evaluates prediction accuracy (correlation).**
 
 for(i in 1:nFolds){
   print(i)
