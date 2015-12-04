@@ -155,4 +155,28 @@ for(i in 1:nFolds){
 **Expected outcome**: a comparison of your results  with those obtained with lm().
 
 
+##### Simulation and example of fitting splines as fixed effects
+
+x=seq(from=0,to=4*pi, by=1/40)
+signal=sin(x)+x/4+ ((x-2*pi)/4)^2
+error=rnorm(sd=sd(signal),n=length(x))
+y=error+signal
+plot(y~x,cex=.5,col=8)
+lines(x=x,y=signal,col=4,lwd=1.5)
+
+
+
+ ## Fixed Effects splines
+ par(mfrow=c(2,3))
+ knots=c(2,4,10,50,100,500)
+ for(i in knots){
+ 	XNS=ns(x=x,df=i)
+ 	fm=lm(y~XNS)
+ 	plot(y~x,cex=.5,col=8,main=paste0('DF= ',i))
+ 	lines(x=x,y=predict(fm),lwd=.5,col='red')
+ 	lines(x=x,y=signal,col='blue')
+ }
+ 
+ ```
+
 -----------------------------------------------------------------------------------------------------	
