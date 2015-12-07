@@ -1,3 +1,5 @@
+library(bayesm)
+
 gibbsLM_RC<-function(y,d,X,groups,isRandom,R20=.5,df0=1,verbose=TRUE,nIter=150){
   #renumbering groups from 1:K
   groups <- as.integer(as.factor(groups))
@@ -75,3 +77,4 @@ gibbsLM_RC<-function(y,d,X,groups,isRandom,R20=.5,df0=1,verbose=TRUE,nIter=150){
   OUT=list(varE=varE,varB=varB,B=B)
   return(OUT)
 }
+
