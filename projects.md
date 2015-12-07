@@ -56,12 +56,25 @@ The main goal is to assess wheather gene expression information derived from the
 - An appendix with: (a) the code you use for analysis, and (b) convergence diagnostics for Bayesian analysis (trace plots, estimated MC-SEs, etc.).
 
 ```R
+  rm(list=ls())
   load('~/Dropbox/STT_465_FALL_2015/TCGA_GB/DATA_STT465.RData')
   library(survival)
   y<-Surv(time=log(Y$days_to_last_followup),event=Y$death)
   fmML=survreg(y~race+gender+initial_pathologic_diagnosis_method+age_group10,
                data=Y,dist='gaussian')
   summary(fmML)
+  
+  ## Bayesian
+  source('~/GitHub/STT465/gibbsLM_Censored.md')
+  X=as.matrix(model.matrix(~race+gender+initial_pathologic_diagnosis_method+age_group10,data=Y))
+  y=log(Y$days_to_last_followup)
+  d=Y$death
+  groups=rep(1,ncol(X))
+  isRandom=F
+  fmBayes=gibbsLM_RC(y=y,d=d,X=X,groups=groups,isRandom=FALSE,nIter=12000)
+  bHat=colMeans(fmBayes$B[-c(1:500),])
+  plot(bHat,coef(fmML))
+  
   
 ```
 
