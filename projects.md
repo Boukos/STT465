@@ -65,7 +65,7 @@ The main goal is to assess wheather gene expression information derived from the
   summary(fmML)
   
   ## Bayesian
-  source('~/GitHub/STT465/gibbsLM_Censored.md')
+  source('~/GitHub/STT465/gibbsLM_Censored.r') ## available in GitHub/gdlc/STT465/gibbsLM_Censored.r
   X=as.matrix(model.matrix(~race+gender+initial_pathologic_diagnosis_method+age_group10,data=Y))
   y=log(Y$days_to_last_followup)
   d=Y$death
