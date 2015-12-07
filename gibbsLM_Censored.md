@@ -18,10 +18,18 @@ gibbsLM_RC<-function(y,d,X,groups,isRandom,R20=.5,df0=1,verbose=TRUE,nIter=150){
     # Example if you have two groups of effects, with incidence matrices X1 and X2, the first one random the 2nd one fixed,
     # then:  X=cbind(X1,X2) ; groups=c(rep(1,ncol(X1)),rep(2,ncol(X2))); isRandom=c(TRUE,FALSE)
 
+    ## Libraries
+    library(bayesm)
 
-	## Libraries
- 	library(bayesm)
- 	print(isRandom)
+    ## A wrapper for sampling truncated normal
+    rtrun2<-function(sigma,mu,bounds){
+        rtrun(sigma=sigma,mu=mu,a=bounds[1],b=bounds[2])
+    }
+
+    rTruncNormal<-function(sigma,mu,a,b){
+        apply(rtrun2,sigma=1,mu=0,X=cbind(a,b),MARGIN=1)
+    }
+
 
 
 	## Renumbering groups from 1:K
@@ -89,7 +97,8 @@ gibbsLM_RC<-function(y,d,X,groups,isRandom,R20=.5,df0=1,verbose=TRUE,nIter=150){
     	if(nCensored>0){#*# sampling censored points from truncated normal
       		Xb=X%*%beta
       		lowerBound=y[whichCensored]-Xb[whichCensored]
-      		error[whichCensored]<-unlist(lapply(FUN=rtrun,X=lowerBound,mu=0,sigma=sqrt(varE[i]),b=Inf))
+      		#error[whichCensored]<-rTruncNormal(a=lowerBound,b=Inf,mu=0,sd=sqrt(varE[i]))
+      		#unlist(lapply(FUN=rtrun,X=lowerBound,mu=0,sigma=sqrt(varE[i]),b=Inf))
     	}
 
    		if(verbose){ cat(i,round(varE[i],3),'\n') }
