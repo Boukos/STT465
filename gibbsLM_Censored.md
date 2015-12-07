@@ -9,7 +9,7 @@ Contact: gustavoc@msu.edu
 ```R
 
 gibbsLM_RC<-function(y,d,X,groups,isRandom,R20=.5,df0=1,verbose=TRUE,nIter=150){
-	## Inputs
+    ## Inputs
     # y (nx1) time to event or time to censoring #*#
     # d (nx1) 1 for event, 0 for censoring       #*#
     # X (nxp) an incidence matrix of effects 
@@ -95,10 +95,9 @@ gibbsLM_RC<-function(y,d,X,groups,isRandom,R20=.5,df0=1,verbose=TRUE,nIter=150){
     	B[i,]=beta
 
     	if(nCensored>0){#*# sampling censored points from truncated normal
-      		Xb=X%*%beta
-      		lowerBound=y[whichCensored]-Xb[whichCensored]
-      		error[whichCensored]<-rTruncNormal(a=lowerBound,b=Inf,mu=0,sigma=sqrt(varE[i]))
-      		#unlist(lapply(FUN=rtrun,X=lowerBound,mu=0,sigma=sqrt(varE[i]),b=Inf))
+      		Xb=X[whichCensored,,drop=F]%*%beta
+      		lowerBound=y[whichCensored]-Xb
+      		error[whichCensored]<-rTruncNormal(sigma=sqrt(varE[i]),mu=0,a=lowerBound,b=Inf)
     	}
 
    		if(verbose){ cat(i,round(varE[i],3),'\n') }
