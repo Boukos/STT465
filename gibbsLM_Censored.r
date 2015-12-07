@@ -1,7 +1,3 @@
-### Gibbs sampler for multiple linear regression with right-censored data
-
-```R
-
 library(bayesm)
 
 gibbsLM_RC<-function(y,d,X,groups,isRandom,R20=.5,df0=1,verbose=TRUE,nIter=150){
@@ -82,4 +78,3 @@ gibbsLM_RC<-function(y,d,X,groups,isRandom,R20=.5,df0=1,verbose=TRUE,nIter=150){
   return(OUT)
 }
 
-```
