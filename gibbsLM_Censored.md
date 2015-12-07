@@ -97,7 +97,7 @@ gibbsLM_RC<-function(y,d,X,groups,isRandom,R20=.5,df0=1,verbose=TRUE,nIter=150){
     	if(nCensored>0){#*# sampling censored points from truncated normal
       		Xb=X%*%beta
       		lowerBound=y[whichCensored]-Xb[whichCensored]
-      		#error[whichCensored]<-rTruncNormal(a=lowerBound,b=Inf,mu=0,sd=sqrt(varE[i]))
+      		error[whichCensored]<-rTruncNormal(a=lowerBound,b=Inf,mu=0,sd=sqrt(varE[i]))
       		#unlist(lapply(FUN=rtrun,X=lowerBound,mu=0,sigma=sqrt(varE[i]),b=Inf))
     	}
 
