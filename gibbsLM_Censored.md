@@ -27,10 +27,8 @@ gibbsLM_RC<-function(y,d,X,groups,isRandom,R20=.5,df0=1,verbose=TRUE,nIter=150){
     }
 
     rTruncNormal<-function(sigma,mu,a,b){
-        apply(rtrun2,sigma=1,mu=0,X=cbind(a,b),MARGIN=1)
+        apply(rtrun2,sigma=sigma,mu=mu,X=cbind(a,b),MARGIN=1)
     }
-
-
 
 	## Renumbering groups from 1:K
    	groups<-as.integer(as.factor(groups))
